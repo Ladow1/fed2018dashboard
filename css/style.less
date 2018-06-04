@@ -1,0 +1,277 @@
+// out: ./style.css, compress: false, strictMath: true, clean-css, autoprefixer: last 3 versions
+//
+@import "variables.less";
+@import (less) "myicons.css";
+
+
+//Globálne nastavenia
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/overlay-texture.png), linear-gradient(180deg, #4b89c5 0%, #b5c9db 100%);
+    background-size: contain, cover;
+    overflow: auto;
+}
+
+//layout
+.container-all {
+    max-width: 1100px;
+    height: 100vh;
+    margin: 0vh auto;
+    display: flex;
+    background-color: #ebeff1;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    @media @sm {
+        margin: 5vh auto;
+        height: 90vh;
+    }
+}
+
+.header {
+    @media @xs {
+        height: 90px;
+    }
+}
+
+aside {
+    background-color: #33495d;
+    min-width: 200px;
+    header {
+        background-color: @primary;
+    }
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    header {
+        background-color: #fff;
+    }
+    .container-fluid {
+        @media @xs {
+            padding: 0;
+        }
+    }
+    .header {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    nav {
+        background-color: #fff;
+    }
+    .nav.nav-tabs li {
+        width: 50%;
+        a {
+            margin: 0;
+        }
+    }
+    section {
+        padding: 25px 15px;
+        flex: 1 1 auto;
+        overflow: auto;
+        @media @sm {
+            padding: 30px 30px;
+        }
+    }
+}
+
+.modal-backdrop {
+    background-color: @primary;
+    background-color: #fff;
+}
+
+.main-panel {
+    .nav-tabs {
+        font-weight: 600;
+        b {
+            display: block;
+        }
+    }
+}
+
+.navbar {
+    margin-bottom: 0;
+    position: relative;
+    max-height: none;
+    background-color: #fff;
+    .navbar-header {
+        float: none;
+        text-align: center;
+        .navbar-nav {
+            position: fixed;
+            left: 0;
+            top: 30%;
+            z-index: 1000;
+            @media @xs {
+                position: absolute;
+                top: 10px;
+                left: 15px; //position: static;
+            }
+            button {
+                display: block;
+                @media @xs {
+                    display: inline-block;
+                }
+            }
+        }
+        .navbar-brand {
+            @media @xs {
+                display: block;
+                float: none;
+                margin: 0 auto;
+            }
+            img {
+                width: 20px;
+                @media @xs {
+                    display: block;
+                    width: 36px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    .navbar-form {
+        @media @xs {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    &.affix {
+        position: relative;
+    }
+    .user {
+        display: block;
+        float: none;
+        padding: 15px 0;
+        &-buttons {
+            float: right;
+        }
+        &-info {}
+        &-foto {
+            float: left;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 10px 0 0;
+            transition: all .3s ease;
+            img {
+                display: block;
+                width: 100%;
+            }
+            .affix& {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &-desc {
+            h2 {
+                margin: 0;
+                font-size: 1.5em;
+                padding: .5em 0 .2em 0;
+            }
+            h3 {
+                font-size: 1em;
+                margin: 0;
+                padding: 0 0 .2em 0;
+                transition: all .3s ease;
+                .affix& {
+                    font-size: 0;
+                    padding: 0;
+                    opacity: 0;
+                }
+            }
+            var {
+                transition: all .3s ease;
+                .affix& {
+                    font-size: 0;
+                    padding: 0;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+.badge {
+    font-weight: 400;
+    &-danger {
+        background-color: #e74b3b;
+    }
+    .dropdown-toggle & {
+        position: absolute;
+        right: 2px;
+        padding: 2px 4px;
+    }
+
+}
+
+.dropdown {
+    .btn {
+        position: relative;
+    }
+}
+
+.alert-placeholder {
+    position: fixed;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    @media @xs {
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .alert {
+        margin: 10px;
+        box-shadow: 0 0 7px;
+    }
+}
+
+//icons fix
+[class*='myicon-']:before {
+    position: relative;
+    bottom: -.12em;
+}
+
+//
+.progress {
+    &-vertical {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-bottom: 0;
+        width: 2em;
+        position: relative;
+        overflow: visible;
+        background-color: transparent;
+        box-shadow: none;
+        .progress-bar {
+            overflow: visible;
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background-color: @primary;
+            &:before {
+                content: attr(aria-valuenow) "%";
+                display: block;
+                position: absolute;
+                width: 100%;
+                top: -1.7em;
+                color: @text;
+                text-align: center;
+                font-size: .75em;
+                margin-bottom: .2em;
+            }
+        }
+    }
+}
