@@ -6,5 +6,5 @@
 		tspan { white-space:pre }
 		.shp0 { filter: url(#flt1);fill: #27ad5f }
 	</style>
-	<path id="Shape 1" class="shp0" d="M 23 0 v 20 h -14 v 21 h -5 v -37 h 5 l 3 9 h -3 v 4 h 9 l -6 -17 h -12 v 44 l 13 0 v -20 h 14 v -20 h 5 v 36 h -5 l -3 -9 h 3 v -4 h -9 l 6 17 h 12 v -44 Z" />
+	<path id="Shape 1" class="shp0" d="M23,0v20h-14v21h-5v-37h5l3,9h-3v4h9l-6,-17h-12v44l13,0v-20h14v-20h5v36h-5l-3,-9h3v-4h-9l6,17h12v-44z" />
 </svg>
