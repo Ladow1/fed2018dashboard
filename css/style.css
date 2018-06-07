@@ -286,7 +286,7 @@ main section {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #19bb9b;
+  background-color: #2dcb71;
 }
 .progress-vertical .progress-bar:before {
   content: attr(aria-valuenow) "%";
