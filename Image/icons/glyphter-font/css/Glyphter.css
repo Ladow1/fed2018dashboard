@@ -9,7 +9,7 @@
     font-weight: normal;
     font-style: normal;
 }
-[class*='icon-s-']:before{
+[class*='glyphter']:before{
 	display: inline-block;
    font-family: 'glyphter';
    font-style: normal;
@@ -18,8 +18,8 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-s-logo:before{content:'\0041';}
-.icon-s-Staralt:before{content:'\0042';}
-.icon-s-Staraltcopy2:before{content:'\0043';}
-.icon-s-Show more  »:before{content:'\0044';}
-.icon-s-apple:before{content:'\0045';}
+.glyphter-logo:before{content:'\0041';}
+.glyphter-Staralt:before{content:'\0042';}
+.glyphter-Staraltcopy2:before{content:'\0043';}
+.glyphter-Show more  »:before{content:'\0044';}
+.glyphter-apple:before{content:'\0045';}
