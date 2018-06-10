@@ -12,7 +12,24 @@
 8
          url('../fonts/glyphter.svg#glyphter') format('svg');
 }
-
+[class*='glyphter']:before {
+  display: inline-block;
+  font-family: 'icon-s';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-s-Staralt:before {
+  content: '\0042';
+}
+.icon-s-Staraltcopy2:before {
+  content: '\0043';
+}
+.icon-s-apple:before {
+  content: '\0045';
+}
 @font-face {
   font-family: 'myicons';
   src: url('../fonts/myicons.eot');
